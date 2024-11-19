@@ -9,7 +9,8 @@ frontend:
   phases:
     build:
       commands:
-        - export NODE_OPTIONS="--max-old-space-size=8192"
+        - export NODE_OPTIONS="--max-old-space-size=5632"
+        - node -e 'console.log(v8.getHeapStatistics().total_available_size/(1024*1024))'
         - npm run build
   artifacts:
     baseDirectory: dist
