@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import { Authenticator, Button, View, Heading } from "@aws-amplify/ui-react";
-import { signOut } from 'aws-amplify/auth';
 
 //import amplify style
 import "@aws-amplify/ui-react/styles.css";
@@ -31,15 +30,6 @@ function App() {
       console.log('Delete response:', deleted);
     } catch (error) {
       console.error('Error deleting todo:', error);
-    }
-  }
-
-  async function handleSignOut() {
-    try {
-      await signOut();
-      console.log('Successfully signed out');
-    } catch (error) {
-      console.error('Error signing out:', error);
     }
   }
 
