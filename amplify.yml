@@ -17,9 +17,6 @@ frontend:
   artifacts:
     baseDirectory: dist
     files:
-      - '**/*'npm run dev    # For Vite-based projects
-      # or
-      npm start      # For Create React App projects
-      
+      - '**/*'     
   cache:
     paths:      
